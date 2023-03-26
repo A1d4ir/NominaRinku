@@ -4,8 +4,8 @@ namespace NominaRinku.Domain
 {
     public class Empleado: BaseDomainModel
     {
-        public int Numero { get; set; }
         public string? Nombre { get; set; }
-        public Enum Rol { get; set; }
+        public Roles Rol { get; set; }
+        public ICollection<Sueldo>? Sueldos { get; set; }
     }
 }
