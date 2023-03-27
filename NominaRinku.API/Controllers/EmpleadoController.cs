@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using NominaRinku.Application.Features.Empleados.Commands.CreateEmpleado;
 
 namespace NominaRinku.API.Controllers
 {
@@ -14,6 +15,10 @@ namespace NominaRinku.API.Controllers
             _mediator = mediator;
         }
 
-
+        [HttpPost(Name = "NuevoEmpleado")]
+        public async Task<ActionResult<int>> NuevoEmpleado([FromBody] CreateEmpleadoCommand command)
+        {
+            return await _mediator.Send(command);
+        }
     }
 }
