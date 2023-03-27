@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using NominaRinku.Domain;
-using NominaRinlu.Application.Features.Empleados.Commands.CreateEmpleado;
+using NominaRinku.Application.Features.Empleados.Commands.CreateEmpleado;
 
-namespace NominaRinlu.Application.Mappings
+namespace NominaRinku.Application.Mappings
 {
     internal class MappingProfile : Profile
     {

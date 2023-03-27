@@ -2,9 +2,9 @@
 using MediatR;
 using Microsoft.Extensions.Logging;
 using NominaRinku.Domain;
-using NominaRinlu.Application.Contracts.Persistense;
+using NominaRinku.Application.Contracts.Persistense;
 
-namespace NominaRinlu.Application.Features.Empleados.Commands.CreateEmpleado
+namespace NominaRinku.Application.Features.Empleados.Commands.CreateEmpleado
 {
     public class CreateEmpleadoCommandHandler : IRequestHandler<CreateEmpleadoCommand, int>
     {

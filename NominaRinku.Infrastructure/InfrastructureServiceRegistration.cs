@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NominaRinku.Infrastructure.Persistence;
 using NominaRinku.Infrastructure.Repositories;
-using NominaRinlu.Application.Contracts.Persistense;
+using NominaRinku.Application.Contracts.Persistense;
 
 namespace NominaRinku.Infrastructure
 {

@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace NominaRinlu.Application.Features.Empleados.Commands.CreateEmpleado
+namespace NominaRinku.Application.Features.Empleados.Commands.CreateEmpleado
 {
     public class CreateEmpleadoCommandValidator: AbstractValidator<CreateEmpleadoCommand>
     {

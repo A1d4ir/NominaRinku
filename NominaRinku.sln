@@ -13,9 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NominaRinku.Domain", "NominaRinku.Domain\NominaRinku.Domain.csproj", "{BE731E36-5CCB-4575-8F5F-E8C6F62AE03B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NominaRinlu.Application", "NominaRinlu.Application\NominaRinlu.Application.csproj", "{CE39FC40-C4D2-4FF1-AAD9-CFDFA611EB62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NominaRinku.Application", "NominaRinlu.Application\NominaRinku.Application.csproj", "{CE39FC40-C4D2-4FF1-AAD9-CFDFA611EB62}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NominaRinku.Infrastructure", "NominaRinku.Infrastructure\NominaRinku.Infrastructure.csproj", "{18BF9BB6-34B5-4770-9BCD-6B92E01AA4D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NominaRinku.API", "NominaRinku.API\NominaRinku.API.csproj", "{9AE76915-C6E2-420D-A52E-CA2339494D56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{18BF9BB6-34B5-4770-9BCD-6B92E01AA4D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18BF9BB6-34B5-4770-9BCD-6B92E01AA4D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18BF9BB6-34B5-4770-9BCD-6B92E01AA4D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AE76915-C6E2-420D-A52E-CA2339494D56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AE76915-C6E2-420D-A52E-CA2339494D56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AE76915-C6E2-420D-A52E-CA2339494D56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AE76915-C6E2-420D-A52E-CA2339494D56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{BE731E36-5CCB-4575-8F5F-E8C6F62AE03B} = {CE437736-3D07-4AC9-AB2A-9C820305A466}
 		{CE39FC40-C4D2-4FF1-AAD9-CFDFA611EB62} = {CE437736-3D07-4AC9-AB2A-9C820305A466}
 		{18BF9BB6-34B5-4770-9BCD-6B92E01AA4D9} = {93DAFDF4-3B9F-4148-9EA0-17E1AECB06B4}
+		{9AE76915-C6E2-420D-A52E-CA2339494D56} = {B562DF0B-A447-4AE5-B081-47171B2BF715}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {063BC095-B022-42BF-A290-E989503CEFF6}

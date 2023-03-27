@@ -1,6 +1,6 @@
 ﻿using NominaRinku.Domain;
 
-namespace NominaRinlu.Application.Contracts.Persistense
+namespace NominaRinku.Application.Contracts.Persistense
 {
     public interface IEmpleadoRepository: IAsyncRepository<Empleado>
     {

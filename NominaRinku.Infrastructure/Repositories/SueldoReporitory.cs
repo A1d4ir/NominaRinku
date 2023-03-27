@@ -1,6 +1,6 @@
 ﻿using NominaRinku.Domain;
 using NominaRinku.Infrastructure.Persistence;
-using NominaRinlu.Application.Contracts.Persistense;
+using NominaRinku.Application.Contracts.Persistense;
 
 namespace NominaRinku.Infrastructure.Repositories
 {

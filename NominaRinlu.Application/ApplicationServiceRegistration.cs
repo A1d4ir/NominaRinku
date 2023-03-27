@@ -3,7 +3,7 @@ using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace NominaRinlu.Application
+namespace NominaRinku.Application
 {
     public static class ApplicationServiceRegistration
     {

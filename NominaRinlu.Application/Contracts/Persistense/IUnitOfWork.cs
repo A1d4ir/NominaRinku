@@ -1,6 +1,6 @@
 ﻿using NominaRinku.Domain.Common;
 
-namespace NominaRinlu.Application.Contracts.Persistense
+namespace NominaRinku.Application.Contracts.Persistense
 {
     public interface IUnitOfWork: IDisposable
     {

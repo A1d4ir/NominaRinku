@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NominaRinku.Domain.Common;
 using NominaRinku.Infrastructure.Persistence;
-using NominaRinlu.Application.Contracts.Persistense;
+using NominaRinku.Application.Contracts.Persistense;
 using System.Linq.Expressions;
 
 namespace NominaRinku.Infrastructure.Repositories
@@ -28,10 +28,10 @@ namespace NominaRinku.Infrastructure.Repositories
         public async Task<IReadOnlyList<T>> GetAsync(Expression<Func<T, bool>> predicate = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
             string includeString = null,
-            bool disabletracking = true)
+            bool disableTracking = true)
         {
             IQueryable<T> query = _context.Set<T>();
-            if (disabletracking) query = query.AsNoTracking();
+            if (disableTracking) query = query.AsNoTracking();
 
             if (!string.IsNullOrWhiteSpace(includeString)) query = query.Include(includeString);
 
