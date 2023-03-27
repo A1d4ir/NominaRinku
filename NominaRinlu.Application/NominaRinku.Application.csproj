@@ -16,7 +16,6 @@
     <Folder Include="Features\Empleados\Queries\" />
     <Folder Include="Features\Sueldos\Commands\DeleteSueldo\" />
     <Folder Include="Features\Sueldos\Commands\UpdateSueldo\" />
-    <Folder Include="Features\Sueldos\Queries\" />
   </ItemGroup>
 
   <ItemGroup>

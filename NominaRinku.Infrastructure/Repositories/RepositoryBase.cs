@@ -8,7 +8,7 @@ namespace NominaRinku.Infrastructure.Repositories
 {
     public class RepositoryBase<T> : IAsyncRepository<T> where T : BaseDomainModel
     {
-        private readonly NominaRinkuDbContext _context;
+        protected readonly NominaRinkuDbContext _context;
 
         public RepositoryBase(NominaRinkuDbContext context)
         {
@@ -20,7 +20,7 @@ namespace NominaRinku.Infrastructure.Repositories
             return await _context.Set<T>().ToListAsync();
         }
 
-        public async Task<IReadOnlyList<T>> GetAsync(Expression<Func<T, bool>> predicate) 
+        public async Task<IReadOnlyList<T>> GetAsync(Expression<Func<T, bool>> predicate)
         {
             return await _context.Set<T>().Where(predicate).ToListAsync();
         }
