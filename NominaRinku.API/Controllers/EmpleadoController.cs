@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using NominaRinku.Application.Features.Empleados.Commands.CreateEmpleado;
+using NominaRinku.Application.Features.Empleados.Queries.GetEmpleadosList;
 
 namespace NominaRinku.API.Controllers
 {
@@ -13,6 +14,14 @@ namespace NominaRinku.API.Controllers
         public EmpleadoController(IMediator mediator)
         {
             _mediator = mediator;
+        }
+
+        [HttpGet(Name = "GetEmpleados")]
+        public async Task<ActionResult<IEnumerable<EmpleadosVm>>> GetEmpleados()
+        {
+            var query = new GetEmpleadosListQuery();
+            var empleados = await _mediator.Send(query);
+            return Ok(empleados);
         }
 
         [HttpPost(Name = "NuevoEmpleado")]

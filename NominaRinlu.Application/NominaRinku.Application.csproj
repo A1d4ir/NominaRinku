@@ -13,7 +13,6 @@
   <ItemGroup>
     <Folder Include="Features\Empleados\Commands\DeleteEmpleado\" />
     <Folder Include="Features\Empleados\Commands\UopdateEmpleado\" />
-    <Folder Include="Features\Empleados\Queries\" />
     <Folder Include="Features\Sueldos\Commands\DeleteSueldo\" />
     <Folder Include="Features\Sueldos\Commands\UpdateSueldo\" />
   </ItemGroup>

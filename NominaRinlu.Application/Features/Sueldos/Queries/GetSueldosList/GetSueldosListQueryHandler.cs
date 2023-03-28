@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
+using Microsoft.Extensions.Logging;
 using NominaRinku.Application.Contracts.Persistense;
 using NominaRinku.Domain.Common;
 
@@ -18,7 +19,7 @@ namespace NominaRinku.Application.Features.Sueldos.Queries.GetSueldosList
 
         public async Task<List<SueldosVm>> Handle(GetSueldosListQuery request, CancellationToken cancellationToken)
         {
-            var sueldosList = await _unitOfWork.SueldoRepository.GetSueldoByEmpleado(request._EmpleadoId);
+            var sueldosList = await _unitOfWork.SueldoRepository.GetAsync(x => x.EmpleadoId == request._EmpleadoId);
             var empleado = await _unitOfWork.EmpleadoRepository.GetByIdAsync(request._EmpleadoId);
 
             var sueldos = new List<SueldosVm>();
@@ -38,6 +39,8 @@ namespace NominaRinku.Application.Features.Sueldos.Queries.GetSueldosList
 
                 sueldos.Add(new SueldosVm
                     {
+                        Id = sueldo.Id,
+                        Mes = sueldo.Mes,
                         HorasTrabajadas = 192,
                         PagoPorEntregas = pagoPorEntregas,
                         PagoPorBonos = pagoPorBonos,
