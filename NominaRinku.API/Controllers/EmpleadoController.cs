@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using NominaRinku.Application.Features.Empleados.Commands.CreateEmpleado;
+using NominaRinku.Application.Features.Empleados.Commands.DeleteEmpleado;
 using NominaRinku.Application.Features.Empleados.Queries.GetEmpleadosList;
 
 namespace NominaRinku.API.Controllers
@@ -26,6 +27,12 @@ namespace NominaRinku.API.Controllers
 
         [HttpPost(Name = "NuevoEmpleado")]
         public async Task<ActionResult<int>> NuevoEmpleado([FromBody] CreateEmpleadoCommand command)
+        {
+            return await _mediator.Send(command);
+        }
+
+        [HttpDelete(Name = "DeleteEmpleado")]
+        public async Task<ActionResult<int>> DeleteEmpleado([FromBody] DeleteEmpleadoCommand command)
         {
             return await _mediator.Send(command);
         }

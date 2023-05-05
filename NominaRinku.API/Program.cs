@@ -1,11 +1,17 @@
 using NominaRinku.Infrastructure;
 using NominaRinku.Application;
+using NominaRinku.API.Filtro;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddApplicationInsightsTelemetry();
+
+builder.Services.AddControllers( opciones =>
+{
+    opciones.Filters.Add(typeof(FiltroDeExcepcion));
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -20,6 +26,7 @@ builder.Services.AddCors(options =>
     .AllowAnyHeader()
     );
 });
+
 
 var app = builder.Build();
 

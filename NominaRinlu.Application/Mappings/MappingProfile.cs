@@ -4,6 +4,7 @@ using NominaRinku.Application.Features.Empleados.Commands.CreateEmpleado;
 using NominaRinku.Application.Features.Sueldos.Commands.CreateSueldo;
 using NominaRinku.Application.Features.Sueldos.Queries.GetSueldosList;
 using NominaRinku.Application.Features.Empleados.Queries.GetEmpleadosList;
+using NominaRinku.Application.Features.Empleados.Commands.DeleteEmpleado;
 
 namespace NominaRinku.Application.Mappings
 {
@@ -15,6 +16,7 @@ namespace NominaRinku.Application.Mappings
             CreateMap<Empleado, EmpleadosVm>();
             CreateMap<CreateEmpleadoCommand, Empleado>();
             CreateMap<CreateSueldoCommand, Sueldo>();
+            CreateMap<DeleteEmpleadoCommand, Empleado>();
         }
     }
 }
